@@ -14,6 +14,8 @@
 		EF7F54321FEB309C00E2427E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7F54301FEB309C00E2427E /* LaunchScreen.storyboard */; };
 		EF7F543A1FEB446000E2427E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F54391FEB446000E2427E /* LoginViewController.swift */; };
 		EF7F543C1FEB5BAF00E2427E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F543B1FEB5BAF00E2427E /* LoginView.swift */; };
+		EFE6A04A1FEB710A008C686F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE6A0491FEB710A008C686F /* SignUpView.swift */; };
+		EFE6A04C1FEB7349008C686F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE6A04B1FEB7349008C686F /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		EF7F54331FEB309C00E2427E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF7F54391FEB446000E2427E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EF7F543B1FEB5BAF00E2427E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EFE6A0491FEB710A008C686F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		EFE6A04B1FEB7349008C686F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +76,9 @@
 		EF7F543D1FEB604300E2427E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EF7F543B1FEB5BAF00E2427E /* LoginView.swift */,
 				EF7F542B1FEB309C00E2427E /* Main.storyboard */,
+				EF7F543B1FEB5BAF00E2427E /* LoginView.swift */,
+				EFE6A0491FEB710A008C686F /* SignUpView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			children = (
 				EF7F54291FEB309C00E2427E /* ViewController.swift */,
 				EF7F54391FEB446000E2427E /* LoginViewController.swift */,
+				EFE6A04B1FEB7349008C686F /* SignUpViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -167,6 +173,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF7F543A1FEB446000E2427E /* LoginViewController.swift in Sources */,
+				EFE6A04C1FEB7349008C686F /* SignUpViewController.swift in Sources */,
+				EFE6A04A1FEB710A008C686F /* SignUpView.swift in Sources */,
 				EF7F542A1FEB309C00E2427E /* ViewController.swift in Sources */,
 				EF7F543C1FEB5BAF00E2427E /* LoginView.swift in Sources */,
 				EF7F54281FEB309C00E2427E /* AppDelegate.swift in Sources */,

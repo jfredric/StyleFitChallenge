@@ -59,6 +59,11 @@ class ViewController: UIViewController {
         
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     @objc func loginButtonAction(sender: UIButton!) {
         print("current user tapped")
         //performSegue(withIdentifier: loginSegueID, sender: nil)
@@ -68,22 +73,9 @@ class ViewController: UIViewController {
     
     @objc func signUpButtonAction(sender: UIButton!) {
         print("new user tapped")
-        //performSegue(withIdentifier: signUpSegueID, sender: nil)
+        let signUpViewController = SignUpViewController()
+        present(signUpViewController, animated: true, completion: nil)
     }
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == loginSegueID {
-//
-//        }
-//    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-
 
 }
 
