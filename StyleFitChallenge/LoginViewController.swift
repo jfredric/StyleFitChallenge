@@ -56,9 +56,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @objc func loginButtonAction(sender: UIButton!) {
         print("login button tapped")
-        // login...
+        // check login
         
-        //performSegue(withIdentifier: loginSegueID, sender: nil)
+        // then
+        let profileViewController = UserProfileViewController()
+        // set info here
+        present(profileViewController, animated: true, completion: nil)
     }
     
     @objc func cancelButtonAction(sender: UIButton!) {

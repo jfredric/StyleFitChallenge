@@ -16,6 +16,9 @@
 		EF7F543C1FEB5BAF00E2427E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F543B1FEB5BAF00E2427E /* LoginView.swift */; };
 		EFE6A04A1FEB710A008C686F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE6A0491FEB710A008C686F /* SignUpView.swift */; };
 		EFE6A04C1FEB7349008C686F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE6A04B1FEB7349008C686F /* SignUpViewController.swift */; };
+		EFE6A04E1FEB7F93008C686F /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE6A04D1FEB7F93008C686F /* UserProfileView.swift */; };
+		EFE6A0501FEB8277008C686F /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE6A04F1FEB8277008C686F /* UserProfileViewController.swift */; };
+		EFE6A0521FEBA066008C686F /* UserImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE6A0511FEBA066008C686F /* UserImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		EF7F543B1FEB5BAF00E2427E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		EFE6A0491FEB710A008C686F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		EFE6A04B1FEB7349008C686F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		EFE6A04D1FEB7F93008C686F /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		EFE6A04F1FEB8277008C686F /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		EFE6A0511FEBA066008C686F /* UserImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,8 @@
 				EF7F542B1FEB309C00E2427E /* Main.storyboard */,
 				EF7F543B1FEB5BAF00E2427E /* LoginView.swift */,
 				EFE6A0491FEB710A008C686F /* SignUpView.swift */,
+				EFE6A04D1FEB7F93008C686F /* UserProfileView.swift */,
+				EFE6A0511FEBA066008C686F /* UserImageCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -96,6 +104,7 @@
 				EF7F54291FEB309C00E2427E /* ViewController.swift */,
 				EF7F54391FEB446000E2427E /* LoginViewController.swift */,
 				EFE6A04B1FEB7349008C686F /* SignUpViewController.swift */,
+				EFE6A04F1FEB8277008C686F /* UserProfileViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -172,7 +181,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFE6A04E1FEB7F93008C686F /* UserProfileView.swift in Sources */,
+				EFE6A0501FEB8277008C686F /* UserProfileViewController.swift in Sources */,
 				EF7F543A1FEB446000E2427E /* LoginViewController.swift in Sources */,
+				EFE6A0521FEBA066008C686F /* UserImageCollectionViewCell.swift in Sources */,
 				EFE6A04C1FEB7349008C686F /* SignUpViewController.swift in Sources */,
 				EFE6A04A1FEB710A008C686F /* SignUpView.swift in Sources */,
 				EF7F542A1FEB309C00E2427E /* ViewController.swift in Sources */,
