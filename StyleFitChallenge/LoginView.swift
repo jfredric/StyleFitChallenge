@@ -13,6 +13,7 @@ class LoginView: UIView {
     var emailTextField: UITextField = UITextField()
     var passwordTextField: UITextField = UITextField()
     let loginButton = UIButton(type: .system)
+    let cancelButton = UIButton(type: .system)
     
     override init(frame: CGRect){
         super.init(frame: frame)
@@ -21,6 +22,16 @@ class LoginView: UIView {
         
         // Create the UI Elements
         let margins = self.layoutMarginsGuide
+        
+        // cancel button
+        cancelButton.setTitle("cancel", for: .normal)
+        cancelButton.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(cancelButton)
+        
+        cancelButton.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -8).isActive = true
+        cancelButton.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -8).isActive = true
+        
+        // login text fields and button
         
         var uiArray: [UIView] = []
         

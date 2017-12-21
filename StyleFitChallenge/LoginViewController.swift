@@ -20,9 +20,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // create view
         loginView = LoginView(frame: view.frame)
         loginView.loginButton.addTarget(self, action: #selector(loginButtonAction), for: .touchUpInside)
+        loginView.cancelButton.addTarget(self, action: #selector(cancelButtonAction), for: .touchUpInside)
         
         // create tap recognizer to clear keyboard
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.tappedAnywhereAction))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tappedAnywhereAction))
         //tap.delegate =
         view.addGestureRecognizer(tap)
         
@@ -58,6 +59,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // login...
         
         //performSegue(withIdentifier: loginSegueID, sender: nil)
+    }
+    
+    @objc func cancelButtonAction(sender: UIButton!) {
+        print("cancel button tapped")
+        
+        dismiss(animated: true, completion: nil)
     }
 
 }
