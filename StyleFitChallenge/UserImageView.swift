@@ -25,15 +25,12 @@ class UserImageView: UIView {
         // profile avatar image
         imageView = UIImageView(image: #imageLiteral(resourceName: "default_image"))
         imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         self.addSubview(imageView)
         
-        if #available(iOS 11, *) {
-            imageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
-        } else {
-            imageView.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor, constant: 20).isActive = true // offset by 20 for notification bar. SafeArea only available in IB
-        }
+        imageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         
@@ -45,6 +42,7 @@ class UserImageView: UIView {
         self.addSubview(addCommentButton)
         
         addCommentButton.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor).isActive = true
+        //addCommentButton.widthAnchor.constraint(equalToConstant: addCommentButton.cont)
         addCommentButton.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor).isActive = true
         
         // comment textfield
@@ -60,6 +58,7 @@ class UserImageView: UIView {
         textField.leadingAnchor.constraint(equalTo: addCommentButton.trailingAnchor, constant: 8).isActive = true
         textField.bottomAnchor.constraint(equalTo: addCommentButton.bottomAnchor).isActive = true
         textField.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor).isActive = true
+        textField.widthAnchor.constraint(lessThanOrEqualToConstant: frame.width).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {

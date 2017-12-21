@@ -15,6 +15,11 @@ class UserProfileViewController: UIViewController, UICollectionViewDelegateFlowL
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // update view controller
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
 
         // create view
         userProfileView = UserProfileView(frame: view.frame)
@@ -49,7 +54,8 @@ class UserProfileViewController: UIViewController, UICollectionViewDelegateFlowL
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let userImageViewController = UserImageViewController()
         // set info here
-        present(userImageViewController, animated: true, completion: nil)
+        navigationController?.pushViewController(userImageViewController, animated: true)
+        //present(userImageViewController, animated: true, completion: nil)
     }
 
 }

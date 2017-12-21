@@ -58,10 +58,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         print("login button tapped")
         // check login
         
-        // then
         let profileViewController = UserProfileViewController()
+        let navController = UINavigationController(rootViewController: profileViewController)
         // set info here
-        present(profileViewController, animated: true, completion: nil)
+        present(navController, animated: true, completion: nil)
     }
     
     @objc func cancelButtonAction(sender: UIButton!) {
