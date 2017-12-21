@@ -1,0 +1,6 @@
+framework module Pods_StyleFitChallenge {
+  umbrella header "Pods-StyleFitChallenge-umbrella.h"
+
+  export *
+  module * { export * }
+}

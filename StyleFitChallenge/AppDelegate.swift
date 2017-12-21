@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
+        
+        // Firebase does not log you out on uninstall. You have to check for new installs and logout.
+        let userDefaults = UserDefaults.standard
+        let firstOpenedKey = "appFirstTimeOpened"
+        if userDefaults.value(forKey: firstOpenedKey) == nil {
+            //if app is first time opened then it will be nil
+            userDefaults.setValue(true, forKey: firstOpenedKey)
+            // signOut from FIRAuth
+            do {
+                try Auth.auth().signOut()
+            }catch {
+                
+            }
+            // go to beginning of app
+        } else {
+            //go to where you want
+        }
+        
         return true
     }
 

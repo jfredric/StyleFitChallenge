@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E488789E20DB8DDDBB10A754 /* Pods_StyleFitChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 085B76637FD9E278188A6CAA /* Pods_StyleFitChallenge.framework */; };
 		EF7F54281FEB309C00E2427E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F54271FEB309C00E2427E /* AppDelegate.swift */; };
 		EF7F542A1FEB309C00E2427E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F54291FEB309C00E2427E /* ViewController.swift */; };
 		EF7F542D1FEB309C00E2427E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7F542B1FEB309C00E2427E /* Main.storyboard */; };
@@ -24,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		085B76637FD9E278188A6CAA /* Pods_StyleFitChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StyleFitChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17BBE57AAEFE7C8C99FEBC4B /* Pods-StyleFitChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleFitChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StyleFitChallenge/Pods-StyleFitChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		7FA6D1C0DD4B20DAEE24E3CE /* Pods-StyleFitChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleFitChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-StyleFitChallenge/Pods-StyleFitChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		EF7F54241FEB309C00E2427E /* StyleFitChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleFitChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F54271FEB309C00E2427E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF7F54291FEB309C00E2427E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E488789E20DB8DDDBB10A754 /* Pods_StyleFitChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		167F83ADCDB8F9FAC0573690 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				085B76637FD9E278188A6CAA /* Pods_StyleFitChallenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E769D352C13DB160EF24F45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17BBE57AAEFE7C8C99FEBC4B /* Pods-StyleFitChallenge.debug.xcconfig */,
+				7FA6D1C0DD4B20DAEE24E3CE /* Pods-StyleFitChallenge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EF7F541B1FEB309C00E2427E = {
 			isa = PBXGroup;
 			children = (
 				EF7F54261FEB309C00E2427E /* StyleFitChallenge */,
 				EF7F54251FEB309C00E2427E /* Products */,
+				8E769D352C13DB160EF24F45 /* Pods */,
+				167F83ADCDB8F9FAC0573690 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF7F54361FEB309C00E2427E /* Build configuration list for PBXNativeTarget "StyleFitChallenge" */;
 			buildPhases = (
+				0D66CD799C6DB4BA64387A7D /* [CP] Check Pods Manifest.lock */,
 				EF7F54201FEB309C00E2427E /* Sources */,
 				EF7F54211FEB309C00E2427E /* Frameworks */,
 				EF7F54221FEB309C00E2427E /* Resources */,
+				0A4C63F69A7F38A6AE4FD69C /* [CP] Embed Pods Frameworks */,
+				3155DE12653DD5F305B67FCA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,6 +208,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A4C63F69A7F38A6AE4FD69C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-StyleFitChallenge/Pods-StyleFitChallenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StyleFitChallenge/Pods-StyleFitChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0D66CD799C6DB4BA64387A7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StyleFitChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3155DE12653DD5F305B67FCA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StyleFitChallenge/Pods-StyleFitChallenge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF7F54201FEB309C00E2427E /* Sources */ = {
@@ -332,6 +417,7 @@
 		};
 		EF7F54371FEB309C00E2427E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17BBE57AAEFE7C8C99FEBC4B /* Pods-StyleFitChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -348,6 +434,7 @@
 		};
 		EF7F54381FEB309C00E2427E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FA6D1C0DD4B20DAEE24E3CE /* Pods-StyleFitChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
