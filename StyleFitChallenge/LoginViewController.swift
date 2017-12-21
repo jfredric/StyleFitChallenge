@@ -65,12 +65,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 let userInfo = UserInfo(firebaseUser: user!)
                 userInfo.load(completion: {
                     
-                    let profileViewController = UserProfileViewController()
-                    let navController = UINavigationController(rootViewController: profileViewController)
-                    
-                    profileViewController.currentUser = userInfo
-                    
-                    self.present(navController, animated: true, completion: nil)
+                    if userInfo.isAdmin {
+                        let adminViewController = AdminViewController()
+                        let navController = UINavigationController(rootViewController: adminViewController)
+                        
+                        adminViewController.currentUser = userInfo
+                        
+                        self.present(navController, animated: true, completion: nil)
+                    } else {
+                        let profileViewController = UserProfileViewController()
+                        let navController = UINavigationController(rootViewController: profileViewController)
+                        
+                        profileViewController.currentUser = userInfo
+                        
+                        self.present(navController, animated: true, completion: nil)
+                    }
                 })
                 
             } else {

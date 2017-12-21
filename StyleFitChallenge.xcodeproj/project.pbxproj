@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E488789E20DB8DDDBB10A754 /* Pods_StyleFitChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 085B76637FD9E278188A6CAA /* Pods_StyleFitChallenge.framework */; };
 		EF42AB691FEC238300494E65 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42AB681FEC238300494E65 /* UserInfo.swift */; };
+		EF42AB6B1FEC40C300494E65 /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42AB6A1FEC40C300494E65 /* AdminView.swift */; };
+		EF42AB6D1FEC429400494E65 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42AB6C1FEC429400494E65 /* AdminViewController.swift */; };
 		EF7F54281FEB309C00E2427E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F54271FEB309C00E2427E /* AppDelegate.swift */; };
 		EF7F542A1FEB309C00E2427E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F54291FEB309C00E2427E /* ViewController.swift */; };
 		EF7F542D1FEB309C00E2427E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7F542B1FEB309C00E2427E /* Main.storyboard */; };
@@ -33,6 +35,8 @@
 		17BBE57AAEFE7C8C99FEBC4B /* Pods-StyleFitChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleFitChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StyleFitChallenge/Pods-StyleFitChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		7FA6D1C0DD4B20DAEE24E3CE /* Pods-StyleFitChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleFitChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-StyleFitChallenge/Pods-StyleFitChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		EF42AB681FEC238300494E65 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		EF42AB6A1FEC40C300494E65 /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
+		EF42AB6C1FEC429400494E65 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		EF7F54241FEB309C00E2427E /* StyleFitChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleFitChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F54271FEB309C00E2427E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF7F54291FEB309C00E2427E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 				EFE6A04D1FEB7F93008C686F /* UserProfileView.swift */,
 				EFE6A0511FEBA066008C686F /* UserImageCollectionViewCell.swift */,
 				EFE6A0531FEBAD3A008C686F /* UserImageView.swift */,
+				EF42AB6A1FEC40C300494E65 /* AdminView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 				EFE6A04B1FEB7349008C686F /* SignUpViewController.swift */,
 				EFE6A04F1FEB8277008C686F /* UserProfileViewController.swift */,
 				EFE6A0551FEBB300008C686F /* UserImageViewController.swift */,
+				EF42AB6C1FEC429400494E65 /* AdminViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -307,7 +313,9 @@
 				EF7F542A1FEB309C00E2427E /* ViewController.swift in Sources */,
 				EF7F543C1FEB5BAF00E2427E /* LoginView.swift in Sources */,
 				EF7F54281FEB309C00E2427E /* AppDelegate.swift in Sources */,
+				EF42AB6D1FEC429400494E65 /* AdminViewController.swift in Sources */,
 				EF42AB691FEC238300494E65 /* UserInfo.swift in Sources */,
+				EF42AB6B1FEC40C300494E65 /* AdminView.swift in Sources */,
 				EFE6A0561FEBB300008C686F /* UserImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
