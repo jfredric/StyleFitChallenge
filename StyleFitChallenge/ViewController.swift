@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
     
@@ -19,9 +20,30 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // first check oauth and move to login if logged in already
+        // first check auth and move to login if logged in already
         // do that here otherwise go on
-        
+        if let user = Auth.auth().currentUser {
+            // User is signed in.
+            let userInfo = UserInfo(firebaseUser: user)
+            userInfo.load(completion: {
+                
+                if userInfo.isAdmin {
+                    let adminViewController = AdminViewController()
+                    let navController = UINavigationController(rootViewController: adminViewController)
+                    
+                    adminViewController.currentUser = userInfo
+                    
+                    self.present(navController, animated: true, completion: nil)
+                } else {
+                    let profileViewController = UserProfileViewController()
+                    let navController = UINavigationController(rootViewController: profileViewController)
+                    
+                    profileViewController.currentUser = userInfo
+                    
+                    self.present(navController, animated: true, completion: nil)
+                }
+            })
+        }
         
         // Create the UI Elements
         var uiArray: [UIView] = []
