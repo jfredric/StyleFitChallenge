@@ -12,6 +12,7 @@
 		EF7F542D1FEB309C00E2427E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7F542B1FEB309C00E2427E /* Main.storyboard */; };
 		EF7F542F1FEB309C00E2427E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7F542E1FEB309C00E2427E /* Assets.xcassets */; };
 		EF7F54321FEB309C00E2427E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7F54301FEB309C00E2427E /* LaunchScreen.storyboard */; };
+		EF7F543A1FEB446000E2427E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F54391FEB446000E2427E /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EF7F542E1FEB309C00E2427E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF7F54311FEB309C00E2427E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF7F54331FEB309C00E2427E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF7F54391FEB446000E2427E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				EF7F54271FEB309C00E2427E /* AppDelegate.swift */,
 				EF7F54291FEB309C00E2427E /* ViewController.swift */,
+				EF7F54391FEB446000E2427E /* LoginViewController.swift */,
 				EF7F542B1FEB309C00E2427E /* Main.storyboard */,
 				EF7F542E1FEB309C00E2427E /* Assets.xcassets */,
 				EF7F54301FEB309C00E2427E /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7F543A1FEB446000E2427E /* LoginViewController.swift in Sources */,
 				EF7F542A1FEB309C00E2427E /* ViewController.swift in Sources */,
 				EF7F54281FEB309C00E2427E /* AppDelegate.swift in Sources */,
 			);
@@ -277,6 +281,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6D2UCX5FZW;
 				INFOPLIST_FILE = StyleFitChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dustykeyboard.StyleFitChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6D2UCX5FZW;
 				INFOPLIST_FILE = StyleFitChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dustykeyboard.StyleFitChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
