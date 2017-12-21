@@ -66,13 +66,6 @@ class UserProfileView: UIView {
         
         self.addSubview(imageCollectionView)
         
-//        imageCollectionView.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 8).isActive = true
-//        imageCollectionView.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor).isActive = true
-//        imageCollectionView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor).isActive = true
-//        imageCollectionView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor).isActive = true
-        
-        
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

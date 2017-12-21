@@ -45,5 +45,11 @@ class UserProfileViewController: UIViewController, UICollectionViewDelegateFlowL
 
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let userImageViewController = UserImageViewController()
+        // set info here
+        present(userImageViewController, animated: true, completion: nil)
+    }
 
 }
