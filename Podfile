@@ -8,5 +8,7 @@ target 'StyleFitChallenge' do
   # Pods for StyleFitChallenge
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
 
 end

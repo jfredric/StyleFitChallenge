@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E488789E20DB8DDDBB10A754 /* Pods_StyleFitChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 085B76637FD9E278188A6CAA /* Pods_StyleFitChallenge.framework */; };
+		EF42AB691FEC238300494E65 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42AB681FEC238300494E65 /* UserInfo.swift */; };
 		EF7F54281FEB309C00E2427E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F54271FEB309C00E2427E /* AppDelegate.swift */; };
 		EF7F542A1FEB309C00E2427E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F54291FEB309C00E2427E /* ViewController.swift */; };
 		EF7F542D1FEB309C00E2427E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7F542B1FEB309C00E2427E /* Main.storyboard */; };
@@ -23,12 +24,15 @@
 		EFE6A0541FEBAD3A008C686F /* UserImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE6A0531FEBAD3A008C686F /* UserImageView.swift */; };
 		EFE6A0561FEBB300008C686F /* UserImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE6A0551FEBB300008C686F /* UserImageViewController.swift */; };
 		EFE6A05A1FEBCE59008C686F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFE6A0591FEBCE59008C686F /* GoogleService-Info.plist */; };
+		EFE6A05D1FEC160B008C686F /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE6A05C1FEC160B008C686F /* AppDatabase.swift */; };
+		EFE6A0611FEC1DD4008C686F /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE6A0601FEC1DD4008C686F /* Alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		085B76637FD9E278188A6CAA /* Pods_StyleFitChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StyleFitChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17BBE57AAEFE7C8C99FEBC4B /* Pods-StyleFitChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleFitChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StyleFitChallenge/Pods-StyleFitChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		7FA6D1C0DD4B20DAEE24E3CE /* Pods-StyleFitChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleFitChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-StyleFitChallenge/Pods-StyleFitChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		EF42AB681FEC238300494E65 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		EF7F54241FEB309C00E2427E /* StyleFitChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleFitChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F54271FEB309C00E2427E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF7F54291FEB309C00E2427E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +50,8 @@
 		EFE6A0531FEBAD3A008C686F /* UserImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageView.swift; sourceTree = "<group>"; };
 		EFE6A0551FEBB300008C686F /* UserImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageViewController.swift; sourceTree = "<group>"; };
 		EFE6A0591FEBCE59008C686F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EFE6A05C1FEC160B008C686F /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
+		EFE6A0601FEC1DD4008C686F /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,7 @@
 				EF7F543F1FEB605400E2427E /* Model */,
 				EF7F543D1FEB604300E2427E /* Views */,
 				EF7F54411FEB638400E2427E /* Controllers */,
+				EFE6A05F1FEC1DBC008C686F /* Utilities */,
 				EF7F542E1FEB309C00E2427E /* Assets.xcassets */,
 				EFE6A0591FEBCE59008C686F /* GoogleService-Info.plist */,
 				EF7F54331FEB309C00E2427E /* Info.plist */,
@@ -126,6 +133,8 @@
 		EF7F543F1FEB605400E2427E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EFE6A05C1FEC160B008C686F /* AppDatabase.swift */,
+				EF42AB681FEC238300494E65 /* UserInfo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -140,6 +149,14 @@
 				EFE6A0551FEBB300008C686F /* UserImageViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EFE6A05F1FEC1DBC008C686F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EFE6A0601FEC1DD4008C686F /* Alerts.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,12 +240,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-StyleFitChallenge/Pods-StyleFitChallenge-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,10 +301,13 @@
 				EF7F543A1FEB446000E2427E /* LoginViewController.swift in Sources */,
 				EFE6A0521FEBA066008C686F /* UserImageCollectionViewCell.swift in Sources */,
 				EFE6A04C1FEB7349008C686F /* SignUpViewController.swift in Sources */,
+				EFE6A05D1FEC160B008C686F /* AppDatabase.swift in Sources */,
 				EFE6A04A1FEB710A008C686F /* SignUpView.swift in Sources */,
+				EFE6A0611FEC1DD4008C686F /* Alerts.swift in Sources */,
 				EF7F542A1FEB309C00E2427E /* ViewController.swift in Sources */,
 				EF7F543C1FEB5BAF00E2427E /* LoginView.swift in Sources */,
 				EF7F54281FEB309C00E2427E /* AppDelegate.swift in Sources */,
+				EF42AB691FEC238300494E65 /* UserInfo.swift in Sources */,
 				EFE6A0561FEBB300008C686F /* UserImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

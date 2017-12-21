@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -56,19 +57,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @objc func loginButtonAction(sender: UIButton!) {
         print("login button tapped")
-        // check login
-//        //AppUser.sharedInstance.login(username: loginView.emailTextField.text, password: loginView.passwordTextField.text, completion: { (error) in
-//            if error == nil {
-//                // check account time
-//                
-//                
-//            }
-//        })
         
-        let profileViewController = UserProfileViewController()
-        let navController = UINavigationController(rootViewController: profileViewController)
-        // set info here
-        present(navController, animated: true, completion: nil)
+        Auth.auth().signIn(withEmail: loginView.emailTextField.text!, password: loginView.passwordTextField.text!) { user, error in
+            if error == nil {
+                print("Sign in successful")
+                self.loginView.passwordTextField.text = ""
+                let userInfo = UserInfo(firebaseUser: user!)
+                userInfo.load(completion: {
+                    
+                    let profileViewController = UserProfileViewController()
+                    let navController = UINavigationController(rootViewController: profileViewController)
+                    
+                    profileViewController.currentUser = userInfo
+                    
+                    self.present(navController, animated: true, completion: nil)
+                })
+                
+            } else {
+                print("Login failed: \(error?.localizedDescription ?? "unknown error")")
+                messageAlert(title: "Login Failure", message: error?.localizedDescription ?? "unknown error", from: self)
+            }
+        }
+        
+        
     }
     
     @objc func cancelButtonAction(sender: UIButton!) {

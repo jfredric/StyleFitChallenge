@@ -45,6 +45,7 @@ class LoginView: UIView {
         emailTextField.borderStyle = .roundedRect
         emailTextField.placeholder = "email address"
         emailTextField.keyboardType = .emailAddress
+        emailTextField.autocapitalizationType = .none
         emailTextField.returnKeyType = .next
         uiArray.append(emailTextField)
         

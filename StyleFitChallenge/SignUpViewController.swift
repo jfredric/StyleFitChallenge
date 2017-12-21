@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
 
@@ -75,7 +76,28 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             signUpView.errorLabel.text = "password does not match"
         } else {
             signUpView.errorLabel.text = ""
-            // segue, etc
+            
+            Auth.auth().createUser(withEmail: signUpView.emailTextField.text!, password: signUpView.passwordTextField.text!) { user, error in
+                if error == nil {
+                    print("sign up successful")
+                    //messageAlert(title: "Welcome", message: "Your account has been created.", from: nil) // this was causing segue/presentation problems
+                    
+                    Auth.auth().signIn(withEmail: self.signUpView.emailTextField.text!, password: self.signUpView.passwordTextField.text!)
+                    
+                    // Write additional user info
+                    let newUserInfo = UserInfo(name: self.signUpView.nameTextField.text!, email: self.signUpView.emailTextField.text!, isAdmin: false, firebaseUser: user!)
+                    
+                    let profileViewController = UserProfileViewController()
+                    profileViewController.currentUser = newUserInfo
+                    
+                    let navController = UINavigationController(rootViewController: profileViewController)
+                    self.present(navController, animated: true, completion: nil)
+                    
+                } else {
+                    print("sign-up failed: \(error?.localizedDescription ?? "unknown error")")
+                    messageAlert(title: "Sign-Up Failed", message: error?.localizedDescription ?? "unknown error", from: self)
+                }
+            }
         }
     }
     
