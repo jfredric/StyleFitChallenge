@@ -10,73 +10,30 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
-    var emailTextField: UITextField = UITextField()
-    var passwordTextField: UITextField = UITextField()
-
+    // MARK: PROPERTIES
+    var loginView: LoginView!
     
+    // MARK: UIVIEWCONTROLLER
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // set up view properties
-        view.backgroundColor = UIColor.white
+        loginView = LoginView(frame: view.frame)
+        loginView.loginButton.addTarget(self, action: #selector(loginButtonAction), for: .touchUpInside)
         
-        // Create the UI Elements
-        let margins = view.layoutMarginsGuide
+        // set the delegates
+        loginView.emailTextField.delegate = self
+        loginView.passwordTextField.delegate = self
         
-        var uiArray: [UIView] = []
-        
-        let titleLabel = UILabel()
-        titleLabel.text = "Let's get logged in!"
-        titleLabel.textAlignment = .center
-        uiArray.append(titleLabel)
-        
-        // Create email username textfield
-        emailTextField.delegate = self // set delgate for keyboard handling
-        emailTextField.borderStyle = .roundedRect
-        emailTextField.placeholder = "email address"
-        emailTextField.keyboardType = .emailAddress
-        emailTextField.returnKeyType = .next
-        uiArray.append(emailTextField)
-        
-        // Create password text field
-        passwordTextField.delegate = self // set delgate for keyboard handling
-        passwordTextField.borderStyle = .roundedRect
-        passwordTextField.placeholder = "enter password"
-        passwordTextField.isSecureTextEntry = true
-        passwordTextField.returnKeyType = .continue
-        uiArray.append(passwordTextField)
-        
-        let loginButton = UIButton(type: .system)
-        loginButton.setTitle("Login", for: .normal)
-        loginButton.addTarget(self, action: #selector(loginButtonAction), for: .touchUpInside)
-        uiArray.append(loginButton)
-        
-        // Create the stack view to hold the buttons
-        let stackView = UIStackView(arrangedSubviews: uiArray)
-        stackView.axis = .vertical
-        stackView.distribution = .fill
-        stackView.alignment = .fill
-        stackView.spacing = 16
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        view.addSubview(stackView)
-        
-        // set autolayout constraints
-        // center stackView
-        //stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        let sideSpacing: CGFloat = 20
-        stackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: sideSpacing).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -sideSpacing).isActive = true
-        stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        self.view.addSubview(loginView)
     }
     
     // MARK: TEXTFIELD DELEGATE FUNCTIONS
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == emailTextField {
-            passwordTextField.becomeFirstResponder()
+        if textField == loginView.emailTextField {
+            loginView.passwordTextField.becomeFirstResponder()
         }
-        if textField == passwordTextField{
+        if textField == loginView.passwordTextField{
             textField.resignFirstResponder()
             // login in here if we want
         }

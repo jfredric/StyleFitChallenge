@@ -13,6 +13,7 @@
 		EF7F542F1FEB309C00E2427E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7F542E1FEB309C00E2427E /* Assets.xcassets */; };
 		EF7F54321FEB309C00E2427E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7F54301FEB309C00E2427E /* LaunchScreen.storyboard */; };
 		EF7F543A1FEB446000E2427E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F54391FEB446000E2427E /* LoginViewController.swift */; };
+		EF7F543C1FEB5BAF00E2427E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F543B1FEB5BAF00E2427E /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EF7F54311FEB309C00E2427E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF7F54331FEB309C00E2427E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF7F54391FEB446000E2427E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EF7F543B1FEB5BAF00E2427E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +59,39 @@
 			isa = PBXGroup;
 			children = (
 				EF7F54271FEB309C00E2427E /* AppDelegate.swift */,
-				EF7F54291FEB309C00E2427E /* ViewController.swift */,
-				EF7F54391FEB446000E2427E /* LoginViewController.swift */,
-				EF7F542B1FEB309C00E2427E /* Main.storyboard */,
+				EF7F543F1FEB605400E2427E /* Model */,
+				EF7F543D1FEB604300E2427E /* Views */,
+				EF7F54411FEB638400E2427E /* Controllers */,
 				EF7F542E1FEB309C00E2427E /* Assets.xcassets */,
 				EF7F54301FEB309C00E2427E /* LaunchScreen.storyboard */,
 				EF7F54331FEB309C00E2427E /* Info.plist */,
 			);
 			path = StyleFitChallenge;
+			sourceTree = "<group>";
+		};
+		EF7F543D1FEB604300E2427E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF7F543B1FEB5BAF00E2427E /* LoginView.swift */,
+				EF7F542B1FEB309C00E2427E /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EF7F543F1FEB605400E2427E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EF7F54411FEB638400E2427E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF7F54291FEB309C00E2427E /* ViewController.swift */,
+				EF7F54391FEB446000E2427E /* LoginViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +168,7 @@
 			files = (
 				EF7F543A1FEB446000E2427E /* LoginViewController.swift in Sources */,
 				EF7F542A1FEB309C00E2427E /* ViewController.swift in Sources */,
+				EF7F543C1FEB5BAF00E2427E /* LoginView.swift in Sources */,
 				EF7F54281FEB309C00E2427E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
