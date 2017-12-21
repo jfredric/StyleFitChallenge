@@ -59,6 +59,21 @@ class UserImageView: UIView {
         textField.bottomAnchor.constraint(equalTo: addCommentButton.bottomAnchor).isActive = true
         textField.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor).isActive = true
         textField.widthAnchor.constraint(lessThanOrEqualToConstant: frame.width).isActive = true
+        
+        // list of comments - tableview
+        let tableViewTop = imageView.frame.maxY
+        let tableViewHeight = frame.height - imageView.frame.height - 48 // had trouble getting height of textField or button
+        let tableViewFrame = CGRect(x: frame.minX, y: tableViewTop, width: frame.width, height: tableViewHeight)
+        tableView = UITableView(frame: tableViewFrame, style: .plain)
+        //tableView.backgroundColor = UIColor.green
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.addSubview(tableView)
+        
+        tableView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor)
+        tableView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor)
+        tableView.topAnchor.constraint(equalTo: imageView.bottomAnchor)
+        tableView.bottomAnchor.constraint(equalTo: addCommentButton.topAnchor)
     }
     
     required init?(coder aDecoder: NSCoder) {

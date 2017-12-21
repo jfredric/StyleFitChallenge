@@ -61,7 +61,7 @@ class UserProfileView: UIView {
 
         
         imageCollectionView = UICollectionView(frame: collectionFrame, collectionViewLayout: layout)
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        imageCollectionView.translatesAutoresizingMaskIntoConstraints = false
         imageCollectionView.backgroundColor = UIColor.lightGray
         
         self.addSubview(imageCollectionView)
