@@ -57,6 +57,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @objc func loginButtonAction(sender: UIButton!) {
         print("login button tapped")
         // check login
+//        //AppUser.sharedInstance.login(username: loginView.emailTextField.text, password: loginView.passwordTextField.text, completion: { (error) in
+//            if error == nil {
+//                // check account time
+//                
+//                
+//            }
+//        })
         
         let profileViewController = UserProfileViewController()
         let navController = UINavigationController(rootViewController: profileViewController)

@@ -22,6 +22,7 @@
 		EFE6A0521FEBA066008C686F /* UserImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE6A0511FEBA066008C686F /* UserImageCollectionViewCell.swift */; };
 		EFE6A0541FEBAD3A008C686F /* UserImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE6A0531FEBAD3A008C686F /* UserImageView.swift */; };
 		EFE6A0561FEBB300008C686F /* UserImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE6A0551FEBB300008C686F /* UserImageViewController.swift */; };
+		EFE6A05A1FEBCE59008C686F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFE6A0591FEBCE59008C686F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		EFE6A0511FEBA066008C686F /* UserImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		EFE6A0531FEBAD3A008C686F /* UserImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageView.swift; sourceTree = "<group>"; };
 		EFE6A0551FEBB300008C686F /* UserImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageViewController.swift; sourceTree = "<group>"; };
+		EFE6A0591FEBCE59008C686F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +103,7 @@
 				EF7F543D1FEB604300E2427E /* Views */,
 				EF7F54411FEB638400E2427E /* Controllers */,
 				EF7F542E1FEB309C00E2427E /* Assets.xcassets */,
-				EF7F54301FEB309C00E2427E /* LaunchScreen.storyboard */,
+				EFE6A0591FEBCE59008C686F /* GoogleService-Info.plist */,
 				EF7F54331FEB309C00E2427E /* Info.plist */,
 			);
 			path = StyleFitChallenge;
@@ -110,6 +112,7 @@
 		EF7F543D1FEB604300E2427E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EF7F54301FEB309C00E2427E /* LaunchScreen.storyboard */,
 				EF7F542B1FEB309C00E2427E /* Main.storyboard */,
 				EF7F543B1FEB5BAF00E2427E /* LoginView.swift */,
 				EFE6A0491FEB710A008C686F /* SignUpView.swift */,
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF7F54321FEB309C00E2427E /* LaunchScreen.storyboard in Resources */,
+				EFE6A05A1FEBCE59008C686F /* GoogleService-Info.plist in Resources */,
 				EF7F542F1FEB309C00E2427E /* Assets.xcassets in Resources */,
 				EF7F542D1FEB309C00E2427E /* Main.storyboard in Resources */,
 			);
