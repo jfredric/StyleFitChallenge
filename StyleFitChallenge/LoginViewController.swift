@@ -17,8 +17,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // create view
         loginView = LoginView(frame: view.frame)
         loginView.loginButton.addTarget(self, action: #selector(loginButtonAction), for: .touchUpInside)
+        
+        // create tap recognizer to clear keyboard
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.tappedAnywhereAction))
+        //tap.delegate =
+        view.addGestureRecognizer(tap)
         
         // set the delegates
         loginView.emailTextField.delegate = self
@@ -41,6 +47,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: ACTION FUNCTIONS
+    
+    @objc func tappedAnywhereAction(sender: UITapGestureRecognizer!) {
+        // Dismiss keyboard
+        view.endEditing(true)
+    }
     
     @objc func loginButtonAction(sender: UIButton!) {
         print("login button tapped")
